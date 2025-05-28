@@ -12,12 +12,7 @@ body {
 
 .hero-section {
     height: 100vh; /* Faz a seção ocupar a altura total da tela */
-    background-color: #f0f0f0; /* Cor de fundo de exemplo - personalize! */
-    /* Você pode usar uma imagem de fundo também:
-    background-image: url('sua-imagem-de-fundo.jpg');
-    background-size: cover;
-    background-position: center;
-    */
+    background-color: #000; /* Cor de fundo de exemplo - personalize! */
     display: flex; /* Ajuda a centralizar o conteúdo verticalmente e horizontalmente */
     justify-content: center;
     align-items: center;
@@ -30,9 +25,9 @@ body {
 }
 
 .hero-name {
-    font-size: 3rem; /* Tamanho grande para o nome - ajuste conforme o gosto! */
+    font-size: 5rem; /* Tamanho grande para o nome - ajuste conforme o gosto! */
     font-weight: bold; /* Ou outro peso de fonte */
-    color: #333; /* Cor do texto - personalize! */
+    color: #fff; /* Cor do texto - personalize! */
     margin-bottom: 0.5em; /* Espaçamento abaixo do nome */
     /* Exemplo de animação sutil de entrada (opcional):
     animation: fadeInName 1s ease-in-out;
@@ -40,8 +35,8 @@ body {
 }
 
 .hero-tagline {
-    font-size: 1.5rem; /* Tamanho para o subtítulo - ajuste! */
-    color: #555; /* Cor do texto - personalize! */
+    font-size: 3rem; /* Tamanho para o subtítulo - ajuste! */
+    color: #fff; /* Cor do texto - personalize! */
     animation: fadeInTagline 1s ease-in-out 0.5s; /* 0.5s de delay */
     animation-fill-mode: forwards; /* Mantém o estado final da animação */
     opacity: 0;

@@ -6,7 +6,7 @@
 }
 
 body {
-    font-family: 'Arial', sans-serif; /* Escolha uma fonte legal depois! */
+    font-family: 'Arial', sans-serif;
     line-height: 1.6;
 }
 
@@ -43,10 +43,16 @@ body {
 }
 
 .hero-button {
-    display: inline-block; /* Para que o padding e margin funcionem corretamente */
-    padding: 10px 20px; /* Espaçamento interno do botão */
-    color: #fff; /* Cor do texto do botão */
-    text-decoration: none; /* Remove o sublinhado do link */
+    display: inline-block;
+    padding: 10px 20px;
+    color: #fff;
+    text-decoration: none;
+}
+.hero-button:hover {
+    transform: scale(1.1);
+}
+.hero-button:active {
+    text-decoration: none;
 }
 
 /* Exemplo de keyframes para animações (opcional) */

@@ -35,7 +35,7 @@ body {
 }
 
 .hero-tagline {
-    font-size: 3rem; /* Tamanho para o subtítulo - ajuste! */
+    font-size: 1.5rem; /* Tamanho para o subtítulo - ajuste! */
     color: #fff; /* Cor do texto - personalize! */
     animation: fadeInTagline 1s ease-in-out 0.5s; /* 0.5s de delay */
     animation-fill-mode: forwards; /* Mantém o estado final da animação */

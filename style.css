@@ -34,9 +34,7 @@ body {
     font-weight: bold; /* Ou outro peso de fonte */
     color: #fff; /* Cor do texto - personalize! */
     margin-bottom: 0.5em; /* Espaçamento abaixo do nome */
-    /* Exemplo de animação sutil de entrada (opcional):
     animation: fadeInName 1s ease-in-out;
-    */
 }
 
 .hero-tagline {
@@ -54,9 +52,10 @@ body {
     color: #fff;
     text-decoration: none;
     font-family: 'IBM Plex Sans', Arial, sans-serif;
+    transform: transform 0.3s ease-in-out;
 }
 .hero-button:hover {
-    transform: scale(1.1) 0.3s ease-in-out;
+    transform: scale(1.1);
 }
 .hero-button:active {
     text-decoration: none;

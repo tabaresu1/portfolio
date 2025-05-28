@@ -42,21 +42,11 @@ body {
     opacity: 0;
 }
 
-/* Exemplo de como seria um botão CTA (se você adicionar) */
-.cta-button {
-    display: inline-block;
-    margin-top: 2em;
-    padding: 10px 20px;
-    background-color: #007bff; /* Cor de exemplo */
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    font-size: 1rem;
-    transition: background-color 0.3s ease;
-}
-
-.cta-button:hover {
-    background-color: #0056b3; /* Cor de exemplo no hover */
+.hero-button {
+    display: inline-block; /* Para que o padding e margin funcionem corretamente */
+    padding: 10px 20px; /* Espaçamento interno do botão */
+    color: #fff; /* Cor do texto do botão */
+    text-decoration: none; /* Remove o sublinhado do link */
 }
 
 /* Exemplo de keyframes para animações (opcional) */

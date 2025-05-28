@@ -4,25 +4,21 @@
     padding: 0;
     box-sizing: border-box;
 }
-.rubik-mono-one-regular {
-  font-family: "Rubik Mono One", monospace;
-  font-weight: 400;
-  font-style: normal;
-}
 
 body {
-    font-family: 'Rubik Mono One', monospace;
+    font-family: 'IBM Plex Sans', Arial, sans-serif; /* Fonte principal para leitura */
     line-height: 1.6;
-    background-color: #000; /* Cor de fundo de exemplo - personalize! */
+    background-color: #000;
+    color: #fff; /* Definir uma cor de texto padrão para o corpo */
 }
+
 footer {
     background-color: #fff;
 }
 
-h2 {
+h1, h2, h3 { /* Manter Rubik Mono One para todos os cabeçalhos */
     font-family: 'Rubik Mono One', monospace;
-    font-size: 2.5rem;
-    margin-bottom: 1em; /* Espaçamento abaixo do título */
+    color: #fff; /* Já estava, mas bom reforçar */
 }
 
 h2, h3{
@@ -42,6 +38,7 @@ h2, h3{
 }
 
 .hero-name {
+    font-family: 'Rubik Mono One', monospace;
     font-size: 5rem; /* Tamanho grande para o nome - ajuste conforme o gosto! */
     font-weight: bold; /* Ou outro peso de fonte */
     color: #fff; /* Cor do texto - personalize! */
@@ -75,9 +72,15 @@ h2, h3{
 
 .projeto-card{
     font-family: 'IBM Plex Sans', Arial, sans-serif;
-    font-size: 1.2rem; /* Tamanho do texto para projetos */
-    color: #fff; /* Cor do texto - personalize! */
+    font-size: 1.2rem;
+    color: #fff;
+    flex-basis: calc(50% - 1em);
 }
+
+.projeto-card p, .lightbox-details p { /* Exemplo para parágrafos de projeto */
+    font-family: 'IBM Plex Sans', Arial, sans-serif; /* Garante que parágrafos usem esta */
+}
+
 .projeto-card img {
     width: 250px;      /* ajuste conforme o layout desejado */
     height: 180px;     /* ajuste conforme o layout desejado */
@@ -182,8 +185,9 @@ h2, h3{
 
 .projetos-grid {
     display: flex;
-    flex-direction: column;
-    align-items: flex-start; /* ou center, se quiser centralizar tudo */
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: space-around; /* ou center, se quiser centralizar tudo */
     gap: 2em; /* espaço entre os projetos */
 }
 

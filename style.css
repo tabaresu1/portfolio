@@ -61,6 +61,10 @@ body {
     text-decoration: none;
 }
 
+.projetos{
+    font-family: 'IBM Plex Sans', Arial, sans-serif;
+    font-size: 1.2rem; /* Tamanho do texto para projetos */
+}
 /* Exemplo de keyframes para animações (opcional) */
  @keyframes fadeInName {
     from {

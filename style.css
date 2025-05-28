@@ -53,6 +53,7 @@ body {
     padding: 10px 20px;
     color: #fff;
     text-decoration: none;
+    font-family: 'IBM Plex Sans', Arial, sans-serif;
 }
 .hero-button:hover {
     transform: scale(1.1);

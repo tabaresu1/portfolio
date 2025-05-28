@@ -40,6 +40,7 @@ body {
     animation: fadeInTagline 1s ease-in-out 0.5s; /* 0.5s de delay */
     animation-fill-mode: forwards; /* Mantém o estado final da animação */
     opacity: 0;
+    transform: transform 0.2s ease;
 }
 
 .hero-button {

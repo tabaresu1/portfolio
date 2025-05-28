@@ -42,10 +42,9 @@ body {
 .hero-tagline {
     font-size: 1.5rem; /* Tamanho para o subtítulo - ajuste! */
     color: #555; /* Cor do texto - personalize! */
-    /* Exemplo de animação sutil de entrada (opcional):
     animation: fadeInTagline 1s ease-in-out 0.5s; /* 0.5s de delay */
-    /* animation-fill-mode: forwards; /* Mantém o estado final da animação */
-    /* opacity: 0; /* Começa invisível para a animação de fadeIn */
+    animation-fill-mode: forwards; /* Mantém o estado final da animação */
+    opacity: 0;
 }
 
 /* Exemplo de como seria um botão CTA (se você adicionar) */
@@ -66,7 +65,7 @@ body {
 }
 
 /* Exemplo de keyframes para animações (opcional) */
-/* @keyframes fadeInName {
+ @keyframes fadeInName {
     from {
         opacity: 0;
         transform: translateY(-20px);
@@ -75,9 +74,9 @@ body {
         opacity: 1;
         transform: translateY(0);
     }
-} */
+ }
 
-/* @keyframes fadeInTagline {
+@keyframes fadeInTagline {
     from {
         opacity: 0;
         transform: translateY(20px);
@@ -86,7 +85,7 @@ body {
         opacity: 1;
         transform: translateY(0);
     }
-} */
+}
 
 
 /* Media Queries para Responsividade (MUITO IMPORTANTE!) */

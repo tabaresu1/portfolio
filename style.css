@@ -13,11 +13,13 @@
 body {
     font-family: 'Rubik Mono One', monospace;
     line-height: 1.6;
+    background-color: #000; /* Cor de fundo de exemplo - personalize! */
 }
-
+footer {
+    background-color: #fff;
+}
 .hero-section {
     height: 100vh; /* Faz a seção ocupar a altura total da tela */
-    background-color: #000; /* Cor de fundo de exemplo - personalize! */
     display: flex; /* Ajuda a centralizar o conteúdo verticalmente e horizontalmente */
     justify-content: center;
     align-items: center;
@@ -83,6 +85,43 @@ body {
   box-shadow: 0 0 0 4px #fff, 0 4px 32px #000a;
 }
 
+/* Estilos para a Lightbox */
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0; top: 0;
+  width: 100vw; height: 100vh;
+  background: rgba(0,0,0,0.85);
+  justify-content: center;
+  align-items: center;
+}
+.lightbox img {
+  max-width: 90vw;
+  max-height: 80vh;
+  border-radius: 10px;
+  box-shadow: 0 0 32px #000a;
+}
+.lightbox:target {
+  display: flex;
+}
+.lightbox-close {
+  position: fixed;
+  top: 30px;
+  right: 40px;
+  width: 40px;
+  height: 40px;
+  z-index: 10000;
+  cursor: pointer;
+}
+.lightbox-close::before {
+  content: "✕";
+  color: #fff;
+  font-size: 2rem;
+  position: absolute;
+  top: 0; left: 0;
+}
+
 /* Exemplo de keyframes para animações (opcional) */
  @keyframes fadeInName {
     from {
@@ -126,4 +165,11 @@ body {
     .hero-tagline {
         font-size: 1rem;
     }
+}
+
+.projetos-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* ou center, se quiser centralizar tudo */
+    gap: 2em; /* espaço entre os projetos */
 }

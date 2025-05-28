@@ -61,10 +61,28 @@ body {
     text-decoration: none;
 }
 
-.projetos{
+.projeto-card{
     font-family: 'IBM Plex Sans', Arial, sans-serif;
     font-size: 1.2rem; /* Tamanho do texto para projetos */
 }
+.projeto-card img {
+    width: 250px;      /* ajuste conforme o layout desejado */
+    height: 180px;     /* ajuste conforme o layout desejado */
+    object-fit: cover; /* mantém o corte proporcional e preenche o espaço */
+    border-radius: 8px; /* opcional: cantos arredondados */
+    display: block;
+    margin: 0 auto 1em auto; /* centraliza e adiciona espaço abaixo */
+}
+
+.img-lightbox img {
+  cursor: zoom-in;
+  transition: box-shadow 0.2s;
+}
+
+.img-lightbox img:hover {
+  box-shadow: 0 0 0 4px #fff, 0 4px 32px #000a;
+}
+
 /* Exemplo de keyframes para animações (opcional) */
  @keyframes fadeInName {
     from {

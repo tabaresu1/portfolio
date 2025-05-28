@@ -293,6 +293,80 @@ footer {
     font-size: 0.9rem;
 }
 
+/* --- Seção Sobre Mim --- */
+#sobre {
+    padding: 60px 5vw;
+    text-align: center; /* Para centralizar o H2 "Sobre Mim" */
+}
+
+#sobre h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5em; /* Espaço entre o título e o conteúdo abaixo */
+}
+
+.sobre-mim-container {
+    display: flex;
+    flex-direction: row; /* Padrão, mas bom para clareza */
+    align-items: flex-start; /* Alinha o topo da imagem com o topo do texto. Experimente 'center' também. */
+    gap: 30px; /* Espaço entre a foto e o texto */
+    text-align: left; /* Alinha o texto dentro de .sobre-mim-texto à esquerda */
+    margin-top: 2em; /* Espaço abaixo do título h2 "Sobre Mim" */
+}
+
+.sobre-mim-foto {
+    flex-basis: 30%; /* Foto ocupa 30% da largura. Ajuste conforme necessário. */
+    max-width: 280px; /* Um limite para a foto */
+}
+
+.sobre-mim-foto img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%; /* Para deixar a foto redonda - opcional */
+    object-fit: cover;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+}
+
+.sobre-mim-texto {
+    flex-basis: 70%; /* Texto ocupa os 70% restantes. */
+}
+
+.sobre-mim-texto p {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 1rem;
+    line-height: 1.75;
+    color: #e0e0e0;
+    margin-bottom: 1.2em;
+}
+
+.sobre-mim-texto p:last-child {
+    margin-bottom: 0;
+}
+
+/* --- Responsividade para a Seção Sobre Mim --- */
+@media (max-width: 768px) {
+    .sobre-mim-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+    }
+
+    .sobre-mim-foto {
+        flex-basis: auto;
+        width: 50%;
+        max-width: 200px;
+    }
+
+    .sobre-mim-texto {
+        flex-basis: auto;
+        width: 100%;
+        text-align: center;
+    }
+
+    .sobre-mim-texto p {
+        font-size: 0.95rem;
+    }
+}
+
 /* --- Media Queries para Responsividade --- */
 @media (max-width: 900px) { /* Ajuste para quando o lightbox de duas colunas não couber mais */
     .lightbox-content-wrapper {

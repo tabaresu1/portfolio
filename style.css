@@ -1,4 +1,4 @@
-/* Reset básico ou normalize (opcional, mas recomendado para consistência entre navegadores) */
+/* Reset básico */
 * {
     margin: 0;
     padding: 0;
@@ -9,189 +9,359 @@ body {
     font-family: 'IBM Plex Sans', Arial, sans-serif; /* Fonte principal para leitura */
     line-height: 1.6;
     background-color: #000;
-    color: #fff; /* Definir uma cor de texto padrão para o corpo */
+    color: #ccc; /* Cor de texto padrão para o corpo um pouco mais suave que branco puro */
+    scroll-behavior: smooth; /* Rolagem suave para links internos */
 }
 
-footer {
-    background-color: #fff;
-}
-
-h1, h2, h3 { /* Manter Rubik Mono One para todos os cabeçalhos */
+h1, h2, h3, h4, h5, h6 {
     font-family: 'Rubik Mono One', monospace;
-    color: #fff; /* Já estava, mas bom reforçar */
+    color: #fff;
 }
 
-p{
-    font-family: 'IBM Plex Sans', Arial, sans-serif;
-    color:#fff
-}
+/* --- Hero Section --- */
 .hero-section {
-    height: 100vh; /* Faz a seção ocupar a altura total da tela */
-    display: flex; /* Ajuda a centralizar o conteúdo verticalmente e horizontalmente */
+    height: 100vh;
+    display: flex;
     justify-content: center;
     align-items: center;
-    text-align: center; /* Centraliza o texto dentro do .hero-content */
-    padding: 20px; /* Espaçamento interno para telas menores */
+    text-align: center;
+    padding: 20px;
+    background-color: #080808; /* Um pouco diferente do preto total para destacar */
 }
 
 .hero-content {
-    /* Se precisar de alguma estilização específica para o container do conteúdo */
+    /* Estrutura interna da hero section */
 }
 
 .hero-name {
-    font-family: 'Rubik Mono One', monospace;
-    font-size: 5rem; /* Tamanho grande para o nome - ajuste conforme o gosto! */
-    font-weight: bold; /* Ou outro peso de fonte */
-    color: #fff; /* Cor do texto - personalize! */
-    margin-bottom: 0.5em; /* Espaçamento abaixo do nome */
+    font-size: 4rem; /* Ajustado para melhor visualização com Rubik Mono One */
+    color: #fff;
+    margin-bottom: 0.25em;
     animation: fadeInName 1s ease-in-out;
 }
 
 .hero-tagline {
-    font-size: 1.5rem; /* Tamanho para o subtítulo - ajuste! */
-    color: #fff; /* Cor do texto - personalize! */
-    animation: fadeInTagline 1s ease-in-out 0.5s; /* 0.5s de delay */
-    animation-fill-mode: forwards; /* Mantém o estado final da animação */
+    font-family: 'IBM Plex Sans', sans-serif; /* Tagline com fonte mais legível */
+    font-size: 1.3rem;
+    color: #e0e0e0;
+    margin-bottom: 1.5em;
+    animation: fadeInTagline 1s ease-in-out 0.5s;
+    animation-fill-mode: forwards;
     opacity: 0;
-    transition: transform 0.2s ease;
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* Espaço entre os botões */
+    flex-wrap: wrap; /* Para caso os botões quebrem em telas menores */
 }
 
 .hero-button {
     display: inline-block;
-    padding: 10px 20px;
+    padding: 12px 25px;
     color: #fff;
+    background-color: transparent;
+    border: 2px solid #fff;
     text-decoration: none;
     font-family: 'IBM Plex Sans', Arial, sans-serif;
-    transition: transform 0.3s ease-in-out;
-}
-.hero-button:hover {
-    transform: scale(1.1);
-}
-.hero-button:active {
-    text-decoration: none;
+    font-weight: 500;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-out, color 0.3s ease-out, transform 0.2s ease-out;
 }
 
-.projeto-card{
-    font-family: 'IBM Plex Sans', Arial, sans-serif;
-    font-size: 1.2rem;
-    color: #fff;
-    flex-basis: calc(50% - 1em);
+.hero-button:hover,
+.hero-button:focus { /* :focus para acessibilidade */
+    background-color: #fff;
+    color: #000;
+    transform: scale(1.05);
 }
 
-.projeto-card p, .lightbox-details p { /* Exemplo para parágrafos de projeto */
-    font-family: 'IBM Plex Sans', Arial, sans-serif; /* Garante que parágrafos usem esta */
+/* --- Seção Projetos --- */
+#projetos, #sobre, #contato {
+    padding: 60px 5vw; /* Espaçamento generoso */
+    text-align: center; /* Centralizar títulos de seção */
 }
 
-.projeto-card img {
-    width: 250px;      /* ajuste conforme o layout desejado */
-    height: 180px;     /* ajuste conforme o layout desejado */
-    object-fit: cover; /* mantém o corte proporcional e preenche o espaço */
-    border-radius: 8px; /* opcional: cantos arredondados */
+#projetos h2, #sobre h2, #contato h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5em;
+}
+
+.projetos-grid {
+    display: flex;
+    flex-wrap: wrap; /* Permite que os cards quebrem para a próxima linha */
+    justify-content: center; /* Centraliza os cards na linha */
+    gap: 2em; /* Espaço entre os cards */
+}
+
+.projeto-card {
+    background-color: #1a1a1a; /* Cor de fundo para os cards */
+    padding: 1.5em;
+    border-radius: 8px;
+    text-align: left; /* Alinhar texto do card à esquerda */
+    width: calc(100% - 2em); /* Largura padrão para mobile (considerando gap) */
+    max-width: 350px; /* Largura máxima para cada card */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+}
+
+.projeto-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(255,255,255,0.1);
+}
+
+.projeto-card .img-lightbox-trigger img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 1em;
     display: block;
-    margin: 0 auto 1em auto; /* centraliza e adiciona espaço abaixo */
+    cursor: zoom-in;
+    transition: opacity 0.3s ease-out;
+}
+.projeto-card .img-lightbox-trigger img:hover {
+    opacity: 0.85;
 }
 
-.img-lightbox img {
-  cursor: zoom-in;
-  transition: box-shadow 0.2s;
+.projeto-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5em;
+    color: #fff;
 }
 
-.img-lightbox img:hover {
-  box-shadow: 0 0 0 4px #fff, 0 4px 32px #000a;
+.projeto-card .card-descricao {
+    font-size: 0.9rem;
+    color: #b0b0b0;
+    margin-bottom: 1em;
+    min-height: 3em; /* Para dar um pouco de altura uniforme */
 }
 
-/* Estilos para a Lightbox */
+.btn-ver-detalhes {
+    display: inline-block;
+    padding: 8px 15px;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.btn-ver-detalhes:hover {
+    background-color: #555;
+}
+
+
+/* --- Estilos para a Lightbox --- */
 .lightbox {
-  display: none;
-  position: fixed;
-  z-index: 9999;
-  left: 0; top: 0;
-  width: 100vw; height: 100vh;
-  background: rgba(0,0,0,0.85);
-  justify-content: center;
-  align-items: center;
-}
-.lightbox img {
-  max-width: 90vw;   /* permite que a imagem fique maior na tela */
-  max-height: 90vh;
-  width: auto;       /* mantém o tamanho real se couber */
-  height: auto;
-  border-radius: 10px;
-  box-shadow: 0 0 32px #000a;
-}
-.lightbox:target {
-  display: flex;
-}
-.lightbox-close {
-  position: fixed;
-  top: 30px;
-  right: 40px;
-  width: 40px;
-  height: 40px;
-  z-index: 10000;
-  cursor: pointer;
-}
-.lightbox-close::before {
-  content: "✕";
-  color: #fff;
-  font-size: 2rem;
-  position: absolute;
-  top: 0; left: 0;
+    display: none; /* Escondido por padrão */
+    position: fixed;
+    z-index: 9999;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.88); /* Overlay um pouco mais escuro */
+    justify-content: center;
+    align-items: center;
+    padding: 20px; /* Espaçamento para o conteúdo não colar nas bordas da tela */
 }
 
-/* Exemplo de keyframes para animações (opcional) */
- @keyframes fadeInName {
-    from {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
- }
+.lightbox:target {
+    display: flex; /* Mostra o lightbox */
+    animation: fadeInLightbox 0.3s ease-out; /* Animação de entrada para o lightbox */
+}
+
+.lightbox-content-wrapper {
+    display: flex;
+    flex-direction: row;
+    background-color: #1e1e1e; /* Fundo do conteúdo do lightbox */
+    padding: 30px;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 1000px;
+    height: auto; /* Altura se ajusta ao conteúdo, mas com max-height */
+    max-height: 85vh;
+    overflow: hidden; /* Oculta o scroll geral, rolagem será interna se necessário */
+    box-shadow: 0 5px 30px rgba(0,0,0,0.6);
+    position: relative; /* Para posicionar o botão de fechar em relação a este wrapper */
+}
+
+.lightbox-image-container {
+    flex-basis: 45%;
+    margin-right: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.lightbox-main-image {
+    max-width: 100%;
+    max-height: calc(85vh - 60px); /* Considera o padding do wrapper */
+    height: auto;
+    width: auto;
+    object-fit: contain;
+    border-radius: 4px;
+}
+
+.lightbox-details-text {
+    flex-basis: 55%;
+    overflow-y: auto; /* Rolagem SÓ AQUI se o texto for longo */
+    padding-right: 10px; /* Espaço para a barra de rolagem não colar no texto */
+    color: #e0e0e0;
+}
+
+.lightbox-details-text h3 { /* Título do projeto dentro do lightbox */
+    font-family: 'Rubik Mono One', monospace;
+    font-size: 2rem;
+    color: #fff;
+    margin-bottom: 0.75em;
+}
+
+.lightbox-details-text h4 { /* Subtítulos como "O Desafio" */
+    font-family: 'Rubik Mono One', monospace;
+    font-size: 1.1rem;
+    color: #f0f0f0;
+    margin-top: 1.2em;
+    margin-bottom: 0.5em;
+    border-bottom: 1px solid #444; /* Linha sutil abaixo do subtítulo */
+    padding-bottom: 0.25em;
+}
+
+.lightbox-details-text p {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 1rem; /* Um pouco maior para leitura no lightbox */
+    line-height: 1.75;
+    margin-bottom: 1em;
+}
+
+.lightbox-close {
+    position: absolute; /* Posicionado em relação ao .lightbox-content-wrapper */
+    top: 15px;
+    right: 15px;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    z-index: 10; /* Garante que fique acima do conteúdo */
+}
+
+.lightbox-close::before,
+.lightbox-close::after { /* Usando dois pseudo-elementos para um "X" mais robusto */
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 3px; /* Espessura do traço */
+    background-color: #fff;
+    border-radius: 3px;
+}
+
+.lightbox-close::before {
+    transform: translateY(-50%) rotate(45deg);
+}
+
+.lightbox-close::after {
+    transform: translateY(-50%) rotate(-45deg);
+}
+
+/* --- Animações --- */
+@keyframes fadeInName {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
 
 @keyframes fadeInTagline {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInLightbox {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
 }
 
 
-/* Media Queries para Responsividade (MUITO IMPORTANTE!) */
-@media (max-width: 768px) {
-    .hero-name {
-        font-size: 2.5rem; /* Ajuste o tamanho para telas menores */
+/* --- Footer --- */
+footer {
+    background-color: #111; /* Footer escuro para combinar */
+    color: #888;
+    text-align: center;
+    padding: 20px 5vw;
+    font-size: 0.9rem;
+}
+
+/* --- Media Queries para Responsividade --- */
+@media (max-width: 900px) { /* Ajuste para quando o lightbox de duas colunas não couber mais */
+    .lightbox-content-wrapper {
+        flex-direction: column;
+        height: auto;
+        max-height: 85vh;
+        overflow-y: auto; /* Rolagem no wrapper principal */
     }
 
+    .lightbox-image-container {
+        flex-basis: auto;
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 20px;
+        max-height: 45vh;
+    }
+
+    .lightbox-details-text {
+        flex-basis: auto;
+        width: 100%;
+        overflow-y: visible; /* Desativa rolagem interna, pois o wrapper já rola */
+        padding-right: 0;
+        max-height: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-name {
+        font-size: 3rem;
+    }
     .hero-tagline {
-        font-size: 1.2rem; /* Ajuste o tamanho para telas menores */
+        font-size: 1.1rem;
+    }
+    .hero-buttons {
+        flex-direction: column; /* Botões empilhados em telas pequenas */
+        gap: 10px;
+    }
+    .hero-button {
+        padding: 10px 20px;
+    }
+
+    /* Grid de projetos para 1 coluna em mobile */
+    .projeto-card {
+        flex-basis: 100%; /* Ocupa toda a largura */
+        max-width: 100%; /* Garante que ocupe toda a largura */
+    }
+
+    #projetos h2, #sobre h2, #contato h2 {
+        font-size: 2rem;
+    }
+
+    .lightbox-details-text h3 {
+        font-size: 1.6rem;
+    }
+    .lightbox-details-text h4 {
+        font-size: 1rem;
+    }
+    .lightbox-details-text p {
+        font-size: 0.9rem;
     }
 }
 
 @media (max-width: 480px) {
     .hero-name {
-        font-size: 2rem;
+        font-size: 2.2rem;
     }
-
     .hero-tagline {
         font-size: 1rem;
     }
-}
-
-.projetos-grid {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: space-around; /* ou center, se quiser centralizar tudo */
-    gap: 2em; /* espaço entre os projetos */
-}
-
-#projetos {
-    padding: 40px 5vw; /* 40px em cima/baixo, 5vw nas laterais */
+    body {
+        line-height: 1.5; /* Ajusta a linha para textos menores */
+    }
 }

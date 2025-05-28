@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -16,29 +16,62 @@
         <div class="hero-content">
             <h1 class="hero-name">MATHEUS TAVARES</h1>
             <p class="hero-tagline">Designer Gráfico & Desenvolvedor Front-End</p>
-                <div class="hero-buttons">
-                    <a href="#projetos" class="hero-button">Meus Projetos</a>
-                    <a href="#sobre" class="hero-button">Sobre Mim</a>
-                    <a href="#contato" class="hero-button">Contato</a>
-                </div>
+            <div class="hero-buttons">
+                <a href="#projetos" class="hero-button">Meus Projetos</a>
+                <a href="#sobre" class="hero-button">Sobre Mim</a>
+                <a href="#contato" class="hero-button">Contato</a>
+            </div>
         </div>
     </header>
-<section id="projetos">
-    <h2>Meus Projetos</h2>
-    <div class="projetos-grid">
-        <article class="projeto-card">
-            <a href="#img1" class="img-lightbox">
-              <img src="assets/images/BMTH.jpg" alt="Thumbnail do Projeto 1">
-            </a>
-            <!-- Lightbox modal -->
-            <div id="img1" class="lightbox">
-              <a href="#projetos" class="lightbox-close"></a>
-              <img src="assets/images/BMTH.jpg" alt="Projeto 1 em destaque">
+
+    <main>
+        <section id="projetos">
+            <h2>Meus Projetos</h2>
+            <div class="projetos-grid">
+                <article class="projeto-card">
+                    <a href="#lightbox-projeto1" class="img-lightbox-trigger">
+                        <img src="assets/images/BMTH.jpg" alt="Capa conceitual do álbum 'Post Human: NeX GEn' da banda Bring Me The Horizon">
+                    </a>
+                    <h3>BMTH - SP 2024</h3>
+                    <p class="card-descricao">Arte conceitual para anunciar o show</p>
+                    <a href="#lightbox-projeto1" class="btn-ver-detalhes">Ver Detalhes</a>
+                </article>
+
+                </div>
+        </section>
+
+        <div id="lightbox-projeto1" class="lightbox">
+            <a href="#projetos" class="lightbox-close" aria-label="Fechar"></a>
+            <div class="lightbox-content-wrapper">
+                <div class="lightbox-image-container">
+                    <img src="assets/images/BMTH.jpg" alt="Capa conceitual do álbum 'Post Human: NeX GEn' da banda Bring Me The Horizon em destaque" class="lightbox-main-image">
+                </div>
+                <div class="lightbox-details-text">
+                    <h3>BMTH - Show SP 2024</h3>
+                    <h4>O Desafio</h4>
+                    <p>Criar uma identidade visual impactante e material promocional para o lançamento hipotético do álbum "Post Human: NeX GEn" da banda Bring Me The Horizon, explorando uma estética futurista e distópica, alinhada com a sonoridade da banda.</p>
+                    <h4>A Solução</h4>
+                    <p>Desenvolvi uma série de peças gráficas, incluindo a capa do álbum, mockups de divulgação para redes sociais e um conceito para videoclipe. A paleta de cores focou em tons vibrantes de neon contrastando com texturas metálicas e fundos escuros. A tipografia escolhida combina fontes sans-serif modernas com elementos glitch para transmitir a sensação de tecnologia e ruptura.</p>
+                    <h4>Ferramentas</h4>
+                    <p>Adobe Photoshop, Adobe Illustrator, Figma.</p>
+                </div>
             </div>
-            <h3>BMTH 2024</h3>
-        </article>
-    </div>
-</section>
+        </div>
+
+        <section id="sobre">
+            <h2>Sobre Mim</h2>
+            <p><em>(Conteúdo sobre você virá aqui...)</em></p>
+            <p>Sou um designer gráfico e desenvolvedor front-end apaixonado por criar soluções visuais criativas e funcionais. Minha jornada começou com ilustrações digitais e me encantei pela concepção de identidades visuais e interfaces de usuário...</p>
+        </section>
+
+        <section id="contato">
+            <h2>Contato</h2>
+            <p><em>(Informações de contato ou formulário virão aqui...)</em></p>
+            <p>Gostou do que viu? Vamos conversar sobre o seu próximo projeto!</p>
+            <p>Email: matheus.lu99@gmail.com</p>
+        </section>
+    </main>
+
     <footer>
         <p>&copy; 2025 Matheus Tavares</p>
     </footer>

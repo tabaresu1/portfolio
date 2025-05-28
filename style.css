@@ -1,0 +1,111 @@
+/* Reset básico ou normalize (opcional, mas recomendado para consistência entre navegadores) */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif; /* Escolha uma fonte legal depois! */
+    line-height: 1.6;
+}
+
+.hero-section {
+    height: 100vh; /* Faz a seção ocupar a altura total da tela */
+    background-color: #f0f0f0; /* Cor de fundo de exemplo - personalize! */
+    /* Você pode usar uma imagem de fundo também:
+    background-image: url('sua-imagem-de-fundo.jpg');
+    background-size: cover;
+    background-position: center;
+    */
+    display: flex; /* Ajuda a centralizar o conteúdo verticalmente e horizontalmente */
+    justify-content: center;
+    align-items: center;
+    text-align: center; /* Centraliza o texto dentro do .hero-content */
+    padding: 20px; /* Espaçamento interno para telas menores */
+}
+
+.hero-content {
+    /* Se precisar de alguma estilização específica para o container do conteúdo */
+}
+
+.hero-name {
+    font-size: 3rem; /* Tamanho grande para o nome - ajuste conforme o gosto! */
+    font-weight: bold; /* Ou outro peso de fonte */
+    color: #333; /* Cor do texto - personalize! */
+    margin-bottom: 0.5em; /* Espaçamento abaixo do nome */
+    /* Exemplo de animação sutil de entrada (opcional):
+    animation: fadeInName 1s ease-in-out;
+    */
+}
+
+.hero-tagline {
+    font-size: 1.5rem; /* Tamanho para o subtítulo - ajuste! */
+    color: #555; /* Cor do texto - personalize! */
+    /* Exemplo de animação sutil de entrada (opcional):
+    animation: fadeInTagline 1s ease-in-out 0.5s; /* 0.5s de delay */
+    /* animation-fill-mode: forwards; /* Mantém o estado final da animação */
+    /* opacity: 0; /* Começa invisível para a animação de fadeIn */
+}
+
+/* Exemplo de como seria um botão CTA (se você adicionar) */
+.cta-button {
+    display: inline-block;
+    margin-top: 2em;
+    padding: 10px 20px;
+    background-color: #007bff; /* Cor de exemplo */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #0056b3; /* Cor de exemplo no hover */
+}
+
+/* Exemplo de keyframes para animações (opcional) */
+/* @keyframes fadeInName {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+} */
+
+/* @keyframes fadeInTagline {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+} */
+
+
+/* Media Queries para Responsividade (MUITO IMPORTANTE!) */
+@media (max-width: 768px) {
+    .hero-name {
+        font-size: 2.5rem; /* Ajuste o tamanho para telas menores */
+    }
+
+    .hero-tagline {
+        font-size: 1.2rem; /* Ajuste o tamanho para telas menores */
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-name {
+        font-size: 2rem;
+    }
+
+    .hero-tagline {
+        font-size: 1rem;
+    }
+}

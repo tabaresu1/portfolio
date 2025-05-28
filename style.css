@@ -321,7 +321,7 @@ footer {
 .sobre-mim-foto img {
     width: 100%;
     height: auto;
-    border-radius: 50%; /* Para deixar a foto redonda - opcional */
+    border-radius: 10; /* Para deixar a foto redonda - opcional */
     object-fit: cover;
     box-shadow: 0 4px 12px rgba(0,0,0,0.25);
 }

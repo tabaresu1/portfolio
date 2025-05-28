@@ -21,7 +21,8 @@ h1, h2, h3 { /* Manter Rubik Mono One para todos os cabeçalhos */
     color: #fff; /* Já estava, mas bom reforçar */
 }
 
-h2, h3{
+p{
+    font-family: 'IBM Plex Sans', Arial, sans-serif;
     color:#fff
 }
 .hero-section {
@@ -52,7 +53,7 @@ h2, h3{
     animation: fadeInTagline 1s ease-in-out 0.5s; /* 0.5s de delay */
     animation-fill-mode: forwards; /* Mantém o estado final da animação */
     opacity: 0;
-    transform: transform 0.2s ease;
+    transition: transform 0.2s ease;
 }
 
 .hero-button {
@@ -61,7 +62,7 @@ h2, h3{
     color: #fff;
     text-decoration: none;
     font-family: 'IBM Plex Sans', Arial, sans-serif;
-    transform: transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out;
 }
 .hero-button:hover {
     transform: scale(1.1);

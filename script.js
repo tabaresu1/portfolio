@@ -48,9 +48,9 @@ document.addEventListener('DOMContentLoaded', function () {
         if (slides.length > 0) {
             showSlide(currentSlide);
         }
-}
+    }
 
-// NOVO: Carrossel Black Pentagram
+    // NOVO: Carrossel Black Pentagram
     const carouselBP = document.querySelector('#lightbox-blackpentagram .meu-carrossel-bp'); // Usando a nova classe
     if (carouselBP) {
         const slidesBP = carouselBP.querySelectorAll('.slide');
@@ -88,6 +88,47 @@ document.addEventListener('DOMContentLoaded', function () {
 
         if (slidesBP.length > 0) {
             showSlideBP(currentSlideBP);
+        }
+    }
+
+    // NOVO: Carrossel Nocturna
+    const carouselNC = document.querySelector('#lightbox-nocturna .meu-carrossel-nc'); // Usando a nova classe
+    if (carouselNC) {
+        const slidesNC = carouselNC.querySelectorAll('.slide');
+        const prevButtonNC = document.querySelector('#lightbox-nocturna .carousel-prev-nc'); // Usando a nova classe
+        const nextButtonNC = document.querySelector('#lightbox-nocturna .carousel-next-nc'); // Usando a nova classe
+        let currentSlideNC = 0;
+
+        function showSlideNC(index) {
+            slidesNC.forEach(slide => slide.classList.remove('active'));
+            slidesNC[index].classList.add('active');
+        }
+
+        function nextSlideNC() {
+            currentSlideNC++;
+            if (currentSlideNC >= slidesNC.length) {
+                currentSlideNC = 0;
+            }
+            showSlideNC(currentSlideNC);
+        }
+
+        function prevSlideNC() {
+            currentSlideNC--;
+            if (currentSlideNC < 0) {
+                currentSlideNC = slidesNC.length - 1;
+            }
+            showSlideNC(currentSlideNC);
+        }
+
+        if (nextButtonNC) {
+            nextButtonNC.addEventListener('click', nextSlideNC);
+        }
+        if (prevButtonNC) {
+            prevButtonNC.addEventListener('click', prevSlideNC);
+        }
+
+        if (slidesNC.length > 0) {
+            showSlideNC(currentSlideNC);
         }
     }
 });

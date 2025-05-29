@@ -291,6 +291,65 @@ h1, h2, h3, h4, h5, h6 {
     transform: translateY(-50%) rotate(-45deg);
 }
 
+.meu-carrossel {
+    position: relative; /* Para posicionar os slides se necessário */
+    width: 100%;
+    height: 100%; /* Ou a altura que você definir para a área da imagem */
+    overflow: hidden; /* Esconde os slides que não estão ativos */
+}
+
+.meu-carrossel .slide {
+    display: none; /* Esconde todos os slides por padrão */
+    width: 100%;
+    height: 100%;
+    /* Para centralizar a imagem dentro do slide, se ela for menor */
+    /* display: flex; */
+    /* align-items: center; */
+    /* justify-content: center; */
+}
+
+.meu-carrossel .slide.active {
+    display: block; /* Mostra apenas o slide ativo */
+    /* Se quiser um efeito de fade simples com CSS:
+    animation: fadeInSlide 0.5s ease-in-out;
+    */
+}
+
+.meu-carrossel .slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Ou 'cover', dependendo do efeito desejado */
+}
+
+/* Estilos para os botões (você pode personalizar mais) */
+.carousel-prev,
+.carousel-next {
+    position: absolute; /* Posiciona sobre a área do carrossel */
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0,0,0,0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10; /* Para ficarem acima das imagens */
+    font-size: 1.5rem;
+    border-radius: 3px;
+}
+
+.carousel-prev {
+    left: 10px;
+}
+
+.carousel-next {
+    right: 10px;
+}
+
+@keyframes fadeInSlide {
+    from { opacity: 0.4; }
+    to { opacity: 1; }
+}
+
 /* --- Animações --- */
 @keyframes fadeInName {
     from { opacity: 0; transform: translateY(-20px); }

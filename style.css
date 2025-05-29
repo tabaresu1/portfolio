@@ -26,11 +26,37 @@ h1, h2, h3, h4, h5, h6 {
     align-items: center;
     text-align: center;
     padding: 20px;
-    background-color: #080808; /* Um pouco diferente do preto total para destacar */
+    position: relative; /* ESSENCIAL para posicionar o vídeo e o overlay dentro dela */
+    overflow: hidden; /* Para garantir que nada "vaze" da seção hero */
+    /* A cor de fundo aqui servirá como fallback se o vídeo não carregar */
+    background-color: #080808;
+}
+
+.hero-background-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Garante que o vídeo cubra toda a área, cortando o excesso */
+    transform: translate(-50%, -50%); /* Centraliza o vídeo */
+    z-index: 1; /* Camada mais baixa */
+}
+
+.hero-overlay { /* Opcional, para melhorar o contraste do texto */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Preto com 50% de opacidade. Ajuste conforme necessário. */
+    z-index: 2; /* Acima do vídeo, abaixo do conteúdo */
 }
 
 .hero-content {
-    /* Estrutura interna da hero section */
+    position: relative; /* Para garantir que fique acima do vídeo e do overlay */
+    z-index: 3; /* Camada mais alta */
+    /* Seus estilos existentes para .hero-content, .hero-name, .hero-tagline, .hero-buttons */
 }
 
 .hero-name {

@@ -332,7 +332,7 @@ h1, h2, h3, h4, h5, h6 {
 .carousel-next, /* Botão genérico */
 .carousel-prev-bp, /* Botão específico -bp */
 .carousel-next-bp,
-.carousel-nxt-nc,
+.carousel-next-nc,
 .carousel-prev-nc { /* Botão específico -bp */
     position: absolute;
     top: 50%;

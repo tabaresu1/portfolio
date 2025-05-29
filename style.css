@@ -293,7 +293,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Estilos para o container principal do carrossel */
 .meu-carrossel,
-.meu-carrossel-bp
+.meu-carrossel-bp,
 .meu-carrossel-nc { /* Adicionada a classe .meu-carrossel-bp */
     position: relative;
     width: 100%;
@@ -303,7 +303,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Estilos para cada slide dentro de qualquer um dos carrosséis */
 .meu-carrossel .slide,
-.meu-carrossel-bp .slide
+.meu-carrossel-bp .slide,
 .meu-carrossel-nc .slide { /* Os slides podem ter a mesma classe 'slide' dentro de seus containers específicos */
     display: none;
     width: 100%;
@@ -312,7 +312,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Estilo para o slide ativo */
 .meu-carrossel .slide.active,
-.meu-carrossel-bp .slide.active 
+.meu-carrossel-bp .slide.active, 
 .meu-carrossel-nc .slide.active {
     display: block; /* Ou flex, se estiver centralizando a imagem */
     /* Se tiver animação de fade, ela viria aqui ou na classe .slide com .active */
@@ -320,7 +320,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Estilos para a imagem dentro de um slide */
 .meu-carrossel .slide img,
-.meu-carrossel-bp .slide img
+.meu-carrossel-bp .slide img,
 .meu-carrossel-nc .slide img {
     width: 100%;
     height: 100%;
@@ -349,13 +349,13 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Posicionamento específico se necessário, ou pode ser geral se os nomes das classes forem diferentes */
 .carousel-prev,
-.carousel-prev-bp
+.carousel-prev-bp,
 .carousel-prev-nc {
     left: 10px;
 }
 
 .carousel-next,
-.carousel-next-bp
+.carousel-next-bp,
 .carousel-next-nc {
     right: 10px;
 }

@@ -48,5 +48,46 @@ document.addEventListener('DOMContentLoaded', function () {
         if (slides.length > 0) {
             showSlide(currentSlide);
         }
+}
+
+// NOVO: Carrossel Black Pentagram
+    const carouselBP = document.querySelector('#lightbox-blackpentagram .meu-carrossel-bp'); // Usando a nova classe
+    if (carouselBP) {
+        const slidesBP = carouselBP.querySelectorAll('.slide');
+        const prevButtonBP = document.querySelector('#lightbox-blackpentagram .carousel-prev-bp'); // Usando a nova classe
+        const nextButtonBP = document.querySelector('#lightbox-blackpentagram .carousel-next-bp'); // Usando a nova classe
+        let currentSlideBP = 0;
+
+        function showSlideBP(index) {
+            slidesBP.forEach(slide => slide.classList.remove('active'));
+            slidesBP[index].classList.add('active');
+        }
+
+        function nextSlideBP() {
+            currentSlideBP++;
+            if (currentSlideBP >= slidesBP.length) {
+                currentSlideBP = 0;
+            }
+            showSlideBP(currentSlideBP);
+        }
+
+        function prevSlideBP() {
+            currentSlideBP--;
+            if (currentSlideBP < 0) {
+                currentSlideBP = slidesBP.length - 1;
+            }
+            showSlideBP(currentSlideBP);
+        }
+
+        if (nextButtonBP) {
+            nextButtonBP.addEventListener('click', nextSlideBP);
+        }
+        if (prevButtonBP) {
+            prevButtonBP.addEventListener('click', prevSlideBP);
+        }
+
+        if (slidesBP.length > 0) {
+            showSlideBP(currentSlideBP);
+        }
     }
 });

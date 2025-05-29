@@ -49,14 +49,13 @@ h1, h2, h3, h4, h5, h6 {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Preto com 50% de opacidade. Ajuste conforme necessário. */
+    background-color: rgba(0, 0, 0, 0.8); /* Preto com 50% de opacidade. Ajuste conforme necessário. */
     z-index: 2; /* Acima do vídeo, abaixo do conteúdo */
 }
 
 .hero-content {
     position: relative; /* Para garantir que fique acima do vídeo e do overlay */
     z-index: 3; /* Camada mais alta */
-    /* Seus estilos existentes para .hero-content, .hero-name, .hero-tagline, .hero-buttons */
 }
 
 .hero-name {

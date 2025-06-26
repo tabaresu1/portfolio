@@ -66,3 +66,66 @@ Este portfólio é uma vitrine dos meus trabalhos, tanto no **design gráfico** 
 ```bash
 git clone https://github.com/tabaresu1/portfolio.git
 cd portfolio
+```
+
+2. **Execute localmente:**  
+Abra o arquivo `index.html` diretamente no navegador.  
+
+> ✅ Recomendo usar a extensão **"Live Server"** no VS Code para melhor experiência durante o desenvolvimento.
+
+---
+
+## 📁 Estrutura de Arquivos
+
+```plaintext
+.
+├── assets/
+│   ├── images/        # Imagens de projetos, ícones, etc.
+│   ├── videos/        # Vídeos de background ou de projetos
+│   └── favicon.ico    # Ícone do site
+├── style.css          # Folha de estilos principal
+├── script.js          # Funcionalidades JavaScript
+└── index.html         # Página principal do portfólio
+```
+
+---
+
+## 📂 Destaques dos Projetos
+
+### 🎨 **Design Gráfico**
+
+- **BMTH - SP 2024:**  
+  Arte conceitual para show da banda *Bring Me The Horizon*.
+
+- **Nocturna - Identidade de Marca:**  
+  Criação de identidade visual para marca de moda alternativa.
+
+- **Anhanguera Educacional:**  
+  Artes para mídias sociais e campanhas digitais.
+
+- **The Black Pentagram Fest III:**  
+  Design de flyer e camiseta para festival de música underground.
+
+### 💻 **Desenvolvimento Front-End**
+
+- **Color Converter:**  
+  Ferramenta interativa para conversão de códigos de cor (**HEX**, **RGBA**, **CMYK**), com interface inspirada no **Windows 95**.  
+  👉 [Acesse aqui](https://tabaresu1.github.io/Color-Converter/)  
+
+---
+
+## 🤝 Contato
+
+Se quiser trocar uma ideia, colaborar ou solicitar um projeto, me chame:
+
+- ✉️ **E-mail:** [matheus.lu99@gmail.com](mailto:matheus.lu99@gmail.com)
+- 🌐 Ou utilize o formulário de contato diretamente no site.
+
+---
+
+## 📄 Licença
+
+Este projeto está sob a licença **MIT**.  
+Veja mais detalhes no arquivo [LICENSE](https://github.com/tabaresu1/portfolio/blob/main/LICENSE).
+
+---

@@ -1,51 +1,68 @@
-# 🎨 Portfólio Matheus Tavares: Designer Gráfico & Desenvolvedor Front-End
+# 🎨 Portfólio Matheus Tavares — Designer Gráfico & Desenvolvedor Front-End
 
-Este é o portfólio pessoal de **Matheus Tavares**, apresentando uma seleção de projetos nas áreas de **design gráfico** e **desenvolvimento front-end**.  
-O objetivo é exibir minhas habilidades, experiência e a paixão por criar soluções visuais e interativas impactantes.
+[![HTML5](https://img.shields.io/badge/HTML5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)](https://developer.mozilla.org/pt-BR/docs/Web/HTML)
+[![CSS3](https://img.shields.io/badge/CSS3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)](https://developer.mozilla.org/pt-BR/docs/Web/CSS)
+[![JavaScript](https://img.shields.io/badge/JavaScript-%23F7DF1E.svg?style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript)
+[![GitHub last commit](https://img.shields.io/github/last-commit/tabaresu1/portfolio?style=for-the-badge)](https://github.com/tabaresu1/portfolio/commits/main)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
 
----
-
-## 🚀 Tecnologias Utilizadas
-
-Este portfólio foi construído com uma base sólida de tecnologias web:
-
-- **HTML5** — Estrutura semântica e acessível do conteúdo.
-- **CSS3** — Estilização, layout responsivo e animações, garantindo uma experiência visual agradável.
-- **JavaScript (ES6+)** — Interatividade, como carrossel de imagens nos lightboxes e outros elementos dinâmicos.
-
-Além disso, para os projetos de design, foram utilizadas as seguintes ferramentas:
-
-- Adobe Photoshop
-- Adobe Illustrator
+Um portfólio pessoal que reúne projetos de **design gráfico** e **desenvolvimento front-end**, com foco na criação de soluções visuais impactantes e interfaces interativas.
 
 ---
 
-## ✨ Visão Geral do Projeto
+## 📋 Sumário
 
-O portfólio é dividido em seções principais para facilitar a navegação:
-
-- **Hero Section:**  
-  Uma introdução visual com um vídeo de fundo, meu nome e especialidades.
-
-- **Meus Projetos:**  
-  Uma galeria dos trabalhos mais relevantes em **design gráfico** (flyers, identidade visual, mídias sociais) e **desenvolvimento front-end** (como a ferramenta de conversão de cores).  
-  Cada projeto pode ser expandido para ver detalhes e galerias de imagens via lightbox.
-
-- **Sobre Mim:**  
-  Uma seção dedicada a contar um pouco sobre minha trajetória profissional, minhas paixões e como minhas diferentes formações se complementam.
-
-- **Contato:**  
-  Formas de entrar em contato, incluindo e-mail direto e um formulário para envio de mensagens.
+- [🎯 Descrição do Projeto](#-descrição-do-projeto)
+- [🚀 Funcionalidades](#-funcionalidades)
+- [🛠️ Tecnologias Utilizadas](#️-tecnologias-utilizadas)
+- [⚙️ Instalação e Uso](#️-instalação-e-uso)
+- [📁 Estrutura de Arquivos](#-estrutura-de-arquivos)
+- [📂 Destaques dos Projetos](#-destaques-dos-projetos)
+- [🤝 Contato](#-contato)
+- [📄 Licença](#-licença)
 
 ---
 
-## 🛠️ Instalação e Uso
+## 🎯 Descrição do Projeto
 
-Este projeto é um **site estático** e não requer instalação complexa ou dependências de back-end.
+Este portfólio é uma vitrine dos meus trabalhos, tanto no **design gráfico** quanto no **desenvolvimento front-end**, apresentando:
 
-### Para rodar localmente:
+- Identidades visuais, artes para mídias sociais, flyers e projetos gráficos diversos.
+- Projetos de desenvolvimento, como a ferramenta interativa de **conversão de cores**.
+- Uma interface moderna, responsiva e interativa, feita com tecnologias web.
 
-1. Clone o repositório:
+---
+
+## 🚀 Funcionalidades
+
+- 🎬 **Hero Section:**  
+  Vídeo de fundo com introdução e apresentação dos meus serviços.
+
+- 🖼️ **Galeria de Projetos:**  
+  - Design gráfico: flyers, identidade visual, mídias sociais.  
+  - Front-end: projetos interativos, como o **Color Converter**.
+
+- 👤 **Sobre Mim:**  
+  Informações sobre minha trajetória, habilidades e experiências.
+
+- 📩 **Contato:**  
+  Formulário integrado e e-mail para contato direto.
+
+---
+
+## 🛠️ Tecnologias Utilizadas
+
+- **HTML5** — Estrutura do site.
+- **CSS3** — Estilização, animações e responsividade.
+- **JavaScript (ES6+)** — Funcionalidades interativas como carrosséis e lightboxes.
+- **Adobe Photoshop & Illustrator** — Para desenvolvimento dos projetos gráficos.
+
+---
+
+## ⚙️ Instalação e Uso
+
+1. **Clone o repositório:**
 
 ```bash
 git clone https://github.com/tabaresu1/portfolio.git
+cd portfolio
